@@ -1,0 +1,31 @@
+IDE (Integrated Development Environment) – Ambiente Integrado de Desenvolvimento
+
+    * É um conjunto de softwares utilizado para a construção de programas.
+
+Exemplos: 
+    *   C/C++: Code Blocks
+    *   Java : Eclipse, NetBeans
+    *   C# : Microsoft Visual Studio
+
+
+
+Funcionalidades de uma IDE
+
+    • Edição de código fonte (endentação, autocompletar, destaque de palavras, etc.)
+    • Depuração e testes
+    • Construção do produto final (build)
+    • Sugestão de modelos (templates)
+    • Auxiliar em várias tarefas do seu projeto
+    • Etc.
+
+
+Resumo da aula:
+
+    • IDE: é um conjunto de softwares utilizado para a construção de programas
+    • Code Blocks - IDE para codificar em C/C++
+    • Eclipse, Netbeans - IDE´s para codificar em Java
+    • Microsoft Visual Studio - IDE para codificar em C#
+    • Uma IDE oferece várias funcionalidades para facilitar a construção dos programas
+
+
+
