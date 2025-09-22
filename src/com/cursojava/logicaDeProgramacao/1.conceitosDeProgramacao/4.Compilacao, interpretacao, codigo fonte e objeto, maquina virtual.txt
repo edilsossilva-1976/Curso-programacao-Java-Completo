@@ -1,0 +1,100 @@
+Compilação e interpretação, Código fonte e objeto, Máquina virtual
+
+    *   CODIGO FONTE: é aquele escrito pelo programador em linguagem de programação
+
+    *   COMPILAÇÃO: é um processo que transforma o código-fonte escrito em linguagem Java (arquivos com extensão .java) 
+        em um formato intermediário chamado bytecode (arquivos .class). Esse bytecode é interpretado e executado pela 
+        Java Virtual Machine (JVM), permitindo que o programa seja executado em qualquer sistema que tenha uma JVM instalada. 
+        Esse conceito é conhecido como Write Once, Run Anywhere (WORA) - "Escreva uma vez, execute em qualquer lugar".
+
+
+Exemplos de linguagem que tipicamente usam essa abordagem: C, C++
+
+                    Compilador:                           Gerador de código:
++--------------+     Compilação      +---------------+    construção (build)    +-------------------+      +----------+
+| Código fonte |>>>>>>>>>>>>>>>>>>>>>| Código objeto |>>>>>>>>>>>>>>>>>>>>>>>>> | Código executável |>>>>> | Execução |
++--------------+  Análise léxica +   +---------------+    geração de código     +-------------------+      +----------+
+                  Análise sintática
+
+    *   INTERPRETAÇÃO: O Java também precisa varrer o teu código pra ver se está tudo ok e depois “traduzir” o teu código... 
+        “interpretar” o teu código... “fazer com que ele possa ser entendido pela máquina onde ele está sendo executado”: interpretá-lo!
+
+
+Exemplos de linguagem que tipicamente usam essa abordagem: PHP, JavaScript, Python, Ruby
+
+                     Interpretador:
++--------------+     Interpretação          +----------+
+| Código fonte |>>>>>>>>>>>>>>>>>>>>>>>>>>> | Execução |
++--------------+     Análise lexica +       +----------+
+                   Análise sintática + 
+                    geração de código
+                      (SOB DEMANDA)
+
+
+    *   ABORDAGEM HÍBRIDA: A linguagem Java utiliza uma abordagem híbrida que combina compilação e interpretação para executar seus programas. 
+        Esse modelo foi projetado para equilibrar desempenho, portabilidade e eficiência.
+        
+        Vantagens da Abordagem Híbrida no Java:
+        *   Portabilidade: O bytecode pode ser executado em qualquer sistema com uma JVM.
+        *   Desempenho: O JIT melhora a velocidade de execução ao compilar código nativo sob demanda.
+        *   Flexibilidade: A JVM permite recursos como coleta de lixo (garbage collection) e segurança em tempo de execução.
+        
+        Essa abordagem é um dos motivos pelos quais Java é amplamente utilizado em aplicações que exigem portabilidade e desempenho, como 
+        sistemas corporativos, aplicativos móveis (Android) e desenvolvimento web.
+
+
+                    Compilador:                       Máquina Virtual:
++--------------+    preompilação     +----------+      interpretação        +----------+
+| Código fonte | >>>>>>>>>>>>>>>>>>> | Bytecode | >>>>>>>>>>>>>>>>>>>>>>>>> | Execução |
++--------------+  Análise léxica +   +----------+    geração de código      +----------+
+                  Análise sintática                    (SOB DEMANDA)
+
+    *   VANTAGENS:
+
+    - Compilação: 
+        * velocidade do programa;
+        * auxilio do compilador antes da execução
+
+    - Interpretação:
+        * Flexibilidade de manutenção do aplicativo em produção
+        * Expressividade da linguagem
+        * codigo fonte não precisa ser recompilado para rodar em plataformas diferentes
+
+    - Abordagem híbrida:
+        * Velocidade do programa
+        * auxilio do compilador antes da execução (mais )
+        * Flexibilidade de manutenção do aplicativo em produção
+        * codigo fonte não precisa ser recompilado para rodar em plataformas diferentes (mais )
+
++-------------------------------------------------------------------------------------+
+|                                                          +------------------------+ |
+|                                                          |       Código fonte     | |
+|                                                          +------------------------+ |
+| +------------------------+   +------------------------+  +------------------------+ | 
+| |      Código fonte      |   |       Código fonte     |  |        Bytecode        | |
+| |                        |   |                        |  |  código precompilado   | |
+| +------------------------+   +------------------------+  +------------------------+ |
+| +------------------------+   +------------------------+  +------------------------+ |
+| |   Código executavel    |   |      Interpretador     |  |     Máquina Virtual    | |
+| | Específico para o S.O. |   | Específico para o S.O. |  | Específico para o S.O. | |
+| +------------------------+   +------------------------+  +------------------------+ |
+| +------------------------+   +------------------------+  +------------------------+ |
+| |  Sistema Operacional   |   |   Sistema Operacional  |  |   Sistema Operacional  | |
+| +------------------------+   +------------------------+  +------------------------+ |
+| +------------------------+   +------------------------+  +------------------------+ |
+| |        Hardware        |   |         Hardware       |  |        Hardware        | |
+| +------------------------+   +------------------------+  +------------------------+ |
+|         C / C++                PHP, PYTHON, JAVASCRIPT             JAVA, C#         |
++-------------------------------------------------------------------------------------+
+
+Resumo da aula
+• Tipos de código
+    • Código fonte
+    • Código objeto / bytecode
+
+• Modelos de execução:
+    • Compilação
+        • Gerador de código
+    • Interpretação
+    • Abordagem híbrida
+        • Máquina virtua
